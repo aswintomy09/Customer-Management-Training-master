@@ -1,0 +1,32 @@
+<p>Customers</p>
+
+Filter:<input type="text" id="filter">&nbsp;      
+<a routerLink="/Add-new-customer">Add new customer</a> <br><br>
+<router-outlet></router-outlet>
+<table class="table table-stripped" border="1" >
+  <thead>
+    <tr>
+      
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Order Total</th>
+    </tr>
+  </thead>
+    <tbody>
+    <tr *ngFor="let customer of customers">
+      
+      <td>{{customer.firstname}}</td>
+      <td>{{customer.lastname}}</td>
+      <td>{{customer.address}}</td>
+      <td>{{customer.city}}</td>
+      <td>{{customer.state}}</td>
+      <td>{{customer.ordertotal}}</td>
+    </tr>
+  </tbody>
+    
+    
+  </table>
+
