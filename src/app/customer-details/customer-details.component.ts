@@ -11,5 +11,6 @@ export class CustomerDetailsComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
 
 }

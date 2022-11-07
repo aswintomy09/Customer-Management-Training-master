@@ -3,11 +3,9 @@ p{
 }
 #hp{
     float: left;
-    padding-left: 500px
+    padding-left: 400px
 }
-img{
-    padding-left: 250px;
-}
+
 a:hover{
     background-color: antiquewhite;
     color: black;
