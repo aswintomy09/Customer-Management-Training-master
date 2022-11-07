@@ -22,4 +22,11 @@ private getCustomers(){
     this.customers=data;
   });
 }
+
+deleteCustomer(id:number){
+  this.customerService.deleteCustomer(id).subscribe(data => {
+    console.log(data);
+    this.getCustomers();
+  })
+}
 }
