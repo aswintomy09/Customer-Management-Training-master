@@ -5,5 +5,6 @@ export class Customer {
     address!: String;
     city!: String;
     state!: String;
+    orders!: String;
     ordertotal!: number;
 }

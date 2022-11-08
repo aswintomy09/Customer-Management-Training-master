@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Customer } from '../customer'
 import { CustomerService } from '../customer.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-view',
@@ -11,7 +12,7 @@ export class ListViewComponent implements OnInit {
 
   customers!: Customer[];
 
-  constructor(private customerService: CustomerService) { }
+  constructor(private customerService: CustomerService, private router: Router) { }
 
   ngOnInit(): void {
     
@@ -21,6 +22,10 @@ private getCustomers(){
   this.customerService.getCustomerList().subscribe(data =>{
     this.customers=data;
   });
+}
+
+customerOrders(id:number){
+  this.router.navigate(['CustomerOrders',id]);
 }
 
 deleteCustomer(id:number){

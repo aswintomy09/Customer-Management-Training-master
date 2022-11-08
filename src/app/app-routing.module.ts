@@ -7,6 +7,7 @@ import { CustomerOrdersComponent } from './customer-orders/customer-orders.compo
 import { CustomersComponent } from './customers/customers.component';
 import { EditCustomerComponent } from './edit-customer/edit-customer.component';
 import { ListViewComponent } from './list-view/list-view.component';
+import { LoginComponent } from './login/login.component';
 import { MapViewComponent } from './map-view/map-view.component';
 import { OrdersComponent } from './orders/orders.component';
 
@@ -16,11 +17,12 @@ const routes: Routes = [
   {path:"CardView",component:CardViewComponent},
   {path:"ListView",component:ListViewComponent},
   {path:"MapView",component:MapViewComponent},
-  {path:"CustomerDetails",component:CustomerDetailsComponent},
-  {path:"CustomerOrders",component:CustomerOrdersComponent},
+  {path:"CustomerDetails/:id",component:CustomerDetailsComponent},
+  {path:"CustomerOrders/:id",component:CustomerOrdersComponent},
   {path:"EditCustomer",component:EditCustomerComponent},
   {path:"back",component:MapViewComponent},
-  {path:"Add-new-customer",component:AddNewCustomerComponent}
+  {path:"Add-new-customer",component:AddNewCustomerComponent},
+  {path:"Login",component:LoginComponent}
 ];
 
 @NgModule({

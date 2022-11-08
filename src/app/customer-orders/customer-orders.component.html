@@ -1,17 +1,18 @@
-<a align="right" routerLink="/back">back</a>
-<router-outlet></router-outlet>
-<p>Orders for Ted James</p>
-<table width="30%" border="2">
-<tr align="left" border="2">
-    <th>Order</th>
-    <th>Price</th>
-</tr>
-  <tr border="1">
-    <td>Basketball</td>
-    <td>$7.99</td>
-  </tr>
-  <tr>
-    <td>Shoes</td>
-    <td>$179.99</td>
-  </tr>
-</table>
+<!-- <a align="right" routerLink="/back">back</a>
+<router-outlet></router-outlet> -->
+<h3>Customer Orders</h3>
+<p>Orders for {{customer.firstname}}</p>
+<div>
+  <div>
+    <label><b>Name: </b></label> {{customer.firstname}} {{customer.lastname}}
+  </div>
+  
+  
+  <div>
+    <label><b>Orders: </b></label> {{customer.orders}}
+  </div>
+
+  <div>
+    <label><b>OrderTotal:</b> $</label>{{customer.ordertotal}}
+  </div>
+</div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CustomerService } from '../customer.service';
+import { Customer } from '../customer';
 
 @Component({
   selector: 'app-orders',
@@ -8,9 +9,15 @@ import { CustomerService } from '../customer.service';
 })
 export class OrdersComponent implements OnInit {
 
-  constructor(private customerservice:CustomerService) { }
+  customers!:Customer[];
+  constructor(private customerService:CustomerService) { }
 
   ngOnInit(): void {
+    this.getCustomers();
   }
-
+  private getCustomers(){
+    this.customerService.getCustomerList().subscribe(data =>{
+      this.customers=data;
+    });
+  }
 }

@@ -1,1 +1,4 @@
-<p><img src="assets/customer.jpg" width="40" height="40">Customers</p>
+<p><img src="assets/customer.jpg" width="40" height="40">Customers List</p>
+<ul  style="list-style-type:square" *ngFor="let customer of customers">
+    <li>{{customer.firstname}} {{customer.lastname}}</li>
+</ul>

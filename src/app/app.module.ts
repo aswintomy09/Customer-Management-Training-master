@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CustomerService } from './customer.service';
 import { AddNewCustomerComponent } from './add-new-customer/add-new-customer.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { AddNewCustomerComponent } from './add-new-customer/add-new-customer.com
     CustomerDetailsComponent,
     CustomerOrdersComponent,
     EditCustomerComponent,
-    AddNewCustomerComponent
+    AddNewCustomerComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

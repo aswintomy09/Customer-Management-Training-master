@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Customer } from '../customer';
+import { CustomerService } from '../customer.service';
 
 @Component({
   selector: 'app-map-view',
@@ -6,10 +9,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./map-view.component.css']
 })
 export class MapViewComponent implements OnInit {
-
-  constructor() { }
+  id!:number
+  customers!:Customer[];
+  
+  constructor(private router:Router,private customerService: CustomerService) { }
 
   ngOnInit(): void {
+    this.getCustomers();
   }
-
+  private getCustomers(){
+    this.customerService.getCustomerList().subscribe(data =>{
+      this.customers=data;
+    });
+  }
+  customerDetails(id:number){
+    this.router.navigate(['CustomerDetails',id]);
+  }
 }

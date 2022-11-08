@@ -33,6 +33,13 @@
     </div>
 
     <div class="form-group">
+        <label>Orders</label>
+        <input type="text" class="form-control" id="orders"
+            [(ngModel)] = "customer.orders" name="orders">
+    </div>
+    
+
+    <div class="form-group">
         <label>Order Total</label>
         <input type="text" class="form-control" id="ordertotal"
             [(ngModel)] = "customer.ordertotal" name="ordertotal">
